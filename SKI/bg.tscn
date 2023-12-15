@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx7hetq1jy2xm"]
+
+[ext_resource type="Script" path="res://bg.gd" id="1_xe5m8"]
+[ext_resource type="Texture2D" uid="uid://bv83idqvwkaqd" path="res://mirror-horizon-cut-mirror.png" id="2_7ts6g"]
+
+[node name="InfiniteScrollBG" type="ParallaxBackground"]
+script = ExtResource("1_xe5m8")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(0, 3200)
+
+[node name="Mirror-horizon-cut-mirror" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(801, -700)
+texture = ExtResource("2_7ts6g")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtc356827k2sc"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_uj5ef"]
+[ext_resource type="PackedScene" uid="uid://dx7hetq1jy2xm" path="res://bg.tscn" id="1_w8eo6"]
+[ext_resource type="PackedScene" uid="uid://dnptnj54l1sc" path="res://cool_guy.tscn" id="2_5mxse"]
+[ext_resource type="PackedScene" uid="uid://d2d0x60rc6cl1" path="res://cool_girl.tscn" id="4_q5xsk"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_uj5ef")
+
+[node name="InfiniteScrollBG" parent="." instance=ExtResource("1_w8eo6")]
+camera_velocity = Vector2(0, 300)
+
+[node name="CoolGuy" parent="." instance=ExtResource("2_5mxse")]
+visible = false
+position = Vector2(742, 670)
+
+[node name="CoolGirl" parent="." instance=ExtResource("4_q5xsk")]
