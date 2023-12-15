@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs03ntrup007c"]
+
+[ext_resource type="Texture2D" uid="uid://dbjfdkoqkx3qi" path="res://things/mandarin.png" id="1_cxfms"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_orboa"]
+radius = 52.0
+height = 124.0
+
+[node name="Mandarin" type="RigidBody2D"]
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(91, 91)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_cxfms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(77, 100)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_orboa")

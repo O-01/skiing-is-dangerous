@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcoeo6bomg4jr"]
+
+[ext_resource type="Texture2D" uid="uid://brvvn4ncr7xw2" path="res://things/gift.png" id="1_pw2jl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwirr"]
+size = Vector2(118, 90)
+
+[node name="Gift" type="RigidBody2D"]
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(69, 69)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("1_pw2jl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(70, 71)
+shape = SubResource("RectangleShape2D_xwirr")

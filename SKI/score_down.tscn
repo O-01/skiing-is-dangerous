@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1bkdfuugkc3y"]
+
+[ext_resource type="PackedScene" uid="uid://dcrx8s4q77b5v" path="res://score_down_objects/bear.tscn" id="1_lsjmi"]
+[ext_resource type="PackedScene" uid="uid://bsiwvelatgo44" path="res://score_down_objects/mammoth.tscn" id="2_ovkqc"]
+[ext_resource type="PackedScene" uid="uid://xt86cccfvrec" path="res://score_down_objects/penguin.tscn" id="3_jjuwp"]
+[ext_resource type="PackedScene" uid="uid://cj0057k6t8my7" path="res://score_down_objects/yeti.tscn" id="4_kuuv5"]
+
+[node name="ScoreDown" type="Node2D"]
+
+[node name="Bear" parent="." instance=ExtResource("1_lsjmi")]
+collision_mask = 0
+mass = 0.1
+gravity_scale = 0.0
+
+[node name="Mammoth" parent="." instance=ExtResource("2_ovkqc")]
+position = Vector2(218, 2)
+collision_mask = 0
+mass = 0.1
+gravity_scale = 0.0
+
+[node name="Penguin" parent="." instance=ExtResource("3_jjuwp")]
+position = Vector2(413, 28)
+collision_mask = 0
+mass = 0.1
+gravity_scale = 0.0
+
+[node name="Yeti" parent="." instance=ExtResource("4_kuuv5")]
+position = Vector2(550, 2)
+collision_mask = 0
+mass = 0.1
+gravity_scale = 0.0

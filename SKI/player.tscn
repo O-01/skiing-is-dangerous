@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4anpot3ymh2g"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_5ompr"]
+[ext_resource type="PackedScene" uid="uid://d2d0x60rc6cl1" path="res://cool_girl.tscn" id="1_v3h3g"]
+[ext_resource type="PackedScene" uid="uid://dnptnj54l1sc" path="res://cool_guy.tscn" id="2_4phcr"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_5ompr")
+
+[node name="CoolGirl" parent="." instance=ExtResource("1_v3h3g")]
+
+[node name="CoolGuy" parent="." instance=ExtResource("2_4phcr")]
+position = Vector2(218, -8)

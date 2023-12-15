@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1b07qidv38nj"]
+
+[ext_resource type="PackedScene" uid="uid://demsso1jj8pw8" path="res://score_up_objects/bananas.tscn" id="1_ex7g7"]
+[ext_resource type="PackedScene" uid="uid://cay0mvnri7uj2" path="res://score_up_objects/fish.tscn" id="2_le41b"]
+[ext_resource type="PackedScene" uid="uid://dcoeo6bomg4jr" path="res://score_up_objects/gift.tscn" id="3_gdeeu"]
+[ext_resource type="PackedScene" uid="uid://bs03ntrup007c" path="res://score_up_objects/mandarin.tscn" id="4_583yq"]
+[ext_resource type="PackedScene" uid="uid://btgiwqnt5tspt" path="res://score_up_objects/other_bananas.tscn" id="5_iprng"]
+
+[node name="ScoreUp" type="Node2D"]
+
+[node name="Bananas" parent="." instance=ExtResource("1_ex7g7")]
+collision_mask = 0
+
+[node name="Fish" parent="." instance=ExtResource("2_le41b")]
+position = Vector2(136, 1)
+collision_mask = 0
+
+[node name="Gift" parent="." instance=ExtResource("3_gdeeu")]
+position = Vector2(318, 9)
+collision_mask = 0
+
+[node name="Mandarin" parent="." instance=ExtResource("4_583yq")]
+position = Vector2(467, -15)
+collision_mask = 0
+
+[node name="Other bananas" parent="." instance=ExtResource("5_iprng")]
+position = Vector2(657, 5)
+collision_mask = 0
