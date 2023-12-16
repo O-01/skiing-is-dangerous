@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1bkdfuugkc3y"]
+
+[ext_resource type="PackedScene" uid="uid://dcrx8s4q77b5v" path="res://score_down_objects/bear.tscn" id="1_lsjmi"]
+[ext_resource type="Script" path="res://score_down.gd" id="1_ypsin"]
+[ext_resource type="PackedScene" uid="uid://bsiwvelatgo44" path="res://score_down_objects/mammoth.tscn" id="2_ovkqc"]
+[ext_resource type="PackedScene" uid="uid://xt86cccfvrec" path="res://score_down_objects/penguin.tscn" id="3_jjuwp"]
+[ext_resource type="PackedScene" uid="uid://cj0057k6t8my7" path="res://score_down_objects/yeti.tscn" id="4_kuuv5"]
+
+[node name="ScoreDownThings" type="Node2D"]
+script = ExtResource("1_ypsin")
+
+[node name="Bear" parent="." groups=["damage"] instance=ExtResource("1_lsjmi")]
+mass = 0.1
+
+[node name="Mammoth" parent="." groups=["damage"] instance=ExtResource("2_ovkqc")]
+position = Vector2(218, 2)
+mass = 0.1
+
+[node name="Penguin" parent="." groups=["damage"] instance=ExtResource("3_jjuwp")]
+position = Vector2(413, 28)
+mass = 0.1
+
+[node name="Yeti" parent="." groups=["damage"] instance=ExtResource("4_kuuv5")]
+position = Vector2(550, 2)
+mass = 0.1

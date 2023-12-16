@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3 uid="uid://2pw55h4dntpk"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_i4yvd"]
+[ext_resource type="FontFile" uid="uid://lk1oepr7oqlv" path="res://things/fonts/Outrun future.otf" id="1_ltsse"]
+[ext_resource type="FontFile" uid="uid://b8341qjfwcoq6" path="res://things/fonts/PORKYS_.TTF" id="2_pt3lm"]
+[ext_resource type="FontFile" uid="uid://cvp1skp4yspby" path="res://things/fonts/youre gone.otf" id="3_aumen"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_4pcd2"]
+action = &"start"
+
+[sub_resource type="Shortcut" id="Shortcut_dabaw"]
+events = [SubResource("InputEventAction_4pcd2")]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_i4yvd")
+
+[node name="Score" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.08125
+anchor_top = 0.0133333
+anchor_right = 0.20875
+anchor_bottom = 0.125556
+theme_override_colors/font_color = Color(0.443137, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.772549, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.890196, 0.454902, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_ltsse")
+theme_override_font_sizes/font_size = 56
+metadata/_edit_use_anchors_ = true
+
+[node name="Title1" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.065
+anchor_top = 0.0266667
+anchor_right = 1.0175
+anchor_bottom = 0.314444
+offset_right = -0.00012207
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("1_ltsse")
+theme_override_font_sizes/font_size = 133
+text = "Skiing is dangerous!!"
+
+[node name="Title2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.23
+anchor_top = 0.275556
+anchor_right = 0.770625
+anchor_bottom = 0.395556
+theme_override_colors/font_color = Color(0.835294, 0, 0.290196, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.137255, 0.870588, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_pt3lm")
+theme_override_font_sizes/font_size = 80
+text = "let's go dancing instead"
+
+[node name="StartPrompt" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.325
+anchor_top = 0.853333
+anchor_right = 0.6775
+anchor_bottom = 0.926667
+theme_override_colors/font_color = Color(0.721569, 0.905882, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("3_aumen")
+theme_override_font_sizes/font_size = 47
+action_mode = 0
+button_mask = 0
+shortcut = SubResource("Shortcut_dabaw")
+text = "PRESS SPACE TO START"
+flat = true
+
+[node name="PromptTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true

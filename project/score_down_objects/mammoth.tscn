@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsiwvelatgo44"]
+
+[ext_resource type="Script" path="res://score_down_objects/mammoth.gd" id="1_4b8rx"]
+[ext_resource type="Texture2D" uid="uid://bv6sv0j3svun6" path="res://things/mammoth.png" id="1_j6tgh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l8wbq"]
+radius = 75.0
+height = 180.0
+
+[node name="Mammoth" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_4b8rx")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(84.0001, 98)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_j6tgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(85, 94)
+shape = SubResource("CapsuleShape2D_l8wbq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

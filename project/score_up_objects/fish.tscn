@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cay0mvnri7uj2"]
+
+[ext_resource type="Texture2D" uid="uid://dj8j0a7j83rf6" path="res://things/fish.png" id="1_7dhu2"]
+[ext_resource type="Script" path="res://score_up_objects/fish.gd" id="1_c40kg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2bxma"]
+radius = 52.0
+height = 206.0
+
+[node name="Fish" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_c40kg")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(96, 127)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_7dhu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(94, 117)
+shape = SubResource("CapsuleShape2D_2bxma")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
