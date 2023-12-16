@@ -33,18 +33,24 @@ func _ready():
 	$Menu.prompt_blinker()
 
 func _process(delta):
-	if Input.is_action_pressed("escape"):
-		reset.emit()
+	if $Menu/Title1.is_visible():
+		if Input.is_action_just_released("start"):
+			$Menu/PromptTimer.stop()
+			$Menu/StartPrompt.hide()
+			begin()
+	else:
+		if Input.is_action_pressed("escape"):
+			reset.emit()
+		if Input.is_action_just_released("change_character"):
+			if $Player/CoolGirl.is_visible():
+				$Player/CoolGirl.hide()
+				$Player/CoolGuy.show()
+			else:
+				$Player/CoolGuy.hide()
+				$Player/CoolGirl.show()
 	if Input.is_action_pressed("quit"):
 		get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 		get_tree().quit()
-	if Input.is_action_just_released("change_character"):
-		if $Player/CoolGirl.is_visible():
-			$Player/CoolGirl.hide()
-			$Player/CoolGuy.show()
-		else:
-			$Player/CoolGuy.hide()
-			$Player/CoolGirl.show()
 	$Menu/Score.text = str(Global.score).pad_zeros(6)
 
 func begin():
@@ -89,6 +95,7 @@ func _on_up_timer_timeout():
 			up.position = spawn_locations[0]
 	location_hold = up.position
 	up.linear_velocity = obj_velocity
+	up.add_to_group("food")
 	add_child(up)
 
 func _on_down_timer_timeout():
@@ -108,7 +115,6 @@ func _on_down_timer_timeout():
 	down.linear_velocity = obj_velocity
 	down.add_to_group("damage")
 	add_child(down)
-
 
 func _on_cool_girl_body_entered(body):
 	if $Player/CoolGirl.is_visible():

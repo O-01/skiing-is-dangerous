@@ -81,5 +81,5 @@ text = "PRESS SPACE TO START"
 flat = true
 
 [node name="PromptTimer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.2
 one_shot = true
