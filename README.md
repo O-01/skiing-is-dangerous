@@ -25,7 +25,7 @@
   - **EXIT / QUIT** : ESCAPE / CTRL+C
 #
 ### Latest version download link and instructions for usage may be found at the release page [here](https://github.com/O-01/skiing-is-dangerous/releases/tag/v0.0.1-mvp).
-#### Game created using GDScript along with the GODOT Game Engine ~ all art assets used belong to their respective owners.
+Game created using GDScript along with the GODOT Game Engine ~ all art assets used belong to their respective owners.
 #
 ## Authors / Contact info
 * **Mei Sibley** **|** [Github](https://github.com/meisibley) **|** [LinkedIn](https://www.linkedin.com/in/mei-sibley-147639277) **|**
