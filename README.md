@@ -1,4 +1,4 @@
-# SKIING IS VERY DANGEROUS!!
+# SKIING IS DANGEROUS!!
   Introducing an endless-runner type gameplay taking place in a snowy winter wonderland setting ~ what better way to navigate the chilly hilly landscape than upon a pair of new skis?  
     
   **PRIMARY QUESTS**  
