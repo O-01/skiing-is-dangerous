@@ -24,7 +24,7 @@
   - **RESET TO TITLE SCREEN** : R
   - **EXIT / QUIT** : ESCAPE / CTRL+C
 #
-### Latest version download link and instructions for usage may be found at the release page [here](https://github.com/O-01/skiing-is-dangerous/releases/tag/v0.0.1-mvp).
+### Latest version executable and source code archive downloads, system requirements, and instructions for usage may be found at the [release page](https://github.com/O-01/skiing-is-dangerous/releases/tag/v0.0.1-mvp).
 Game created using GDScript along with the GODOT Game Engine ~ all art assets used belong to their respective owners.
 #
 ## Authors / Contact info
